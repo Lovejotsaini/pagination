@@ -8,12 +8,12 @@ const App = () => {
   const [posts, setPosts] = useState([]);
   const [loading, setLoading] = useState(false);
   const [currentPage, setCurrentPage] = useState(1);
-  const [postsPerPage] = useState(10);
+  const [postsPerPage] = useState(5);
 
   useEffect(() => {
     const fetchPosts = async () => {
       setLoading(true);
-      const res = await axios.get('https://jsonplaceholder.typicode.com/posts');
+      const res = await axios.get('/api/tasks');
       setPosts(res.data);
       setLoading(false);
     };
@@ -31,7 +31,7 @@ const App = () => {
 
   return (
     <div className='container mt-5'>
-      <h1 className='text-primary mb-3'>My Blog</h1>
+      <h1 className='text-primary mb-3'>Candidates data</h1>
       <Posts posts={currentPosts} loading={loading} />
       <Pagination
         postsPerPage={postsPerPage}
