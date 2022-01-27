@@ -10,7 +10,7 @@ const Posts = ({ posts, loading }) => {
       <table className='table'>
         <thead>
           <tr>
-          <th>Sno</th>
+          
             <th>Name</th>
             <th>E-mail</th>
             <th>Mobile no.</th>
@@ -23,7 +23,7 @@ const Posts = ({ posts, loading }) => {
           {
             posts.map((post, index) => (
               <tr key={index}>
-                <td>{index + 1}</td>
+                
                 <td>{post.name}</td>
                 <td>{post.email}</td>
                 <td>{post.number}</td>
